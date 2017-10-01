@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Townsville Community Music Centre</title>
+<link href="newstyle.css" rel="stylesheet" type="text/css">
+<script>
+	function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "gray";
+		}
+	}
+	
+	function nav_item_selected(li_id) {	
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "gray";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id.toString();		
+	}
+	
+</script>
+</head>
+
+<body onLoad="run_first()">
+	<div id="wrapper">
+	<header>
+    	<h1></h1>
+    </header>
+    
+		<div class="nav">
+			<a href="index.html" id="0" onClick="nav_item_selected(0)">Home</a>
+			<div class="dropdown">
+				<button class="dropbtn" id="1">Events</button>
+				<div class="dropdown-content">
+					
+					<a href="all_event.html" onClick="nav_item_selected(1)">Current Events</a>	
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="2">Bulletin Board</button>
+				<div class="dropdown-content">
+					<a href="new_bulletin.html" onClick="nav_item_selected(2)">Post a New one</a>
+					<a href="bulletin_board.html" onClick="nav_item_selected(2)">Bulletin Board</a>	
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="3">Musos</button>
+				<div class="dropdown-content">
+					<a href="self_musos.html" onClick="nav_item_selected(3)">Create yourself band</a>
+					<a href="artists.html" onClick="nav_item_selected(3)">Artists</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="4">Join US</button>
+					 <div class="dropdown-content">
+                     <a href="join_us.html" onClick="nav_item_selected(4)">Join Us</a>	
+					
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="5">About Us</button>
+				<div class="dropdown-content">
+					<a href="contact_us.html" onClick="nav_item_selected(5)">Contact Us</a>	
+					<a href="centre.html" onClick="nav_item_selected(5)">Our Centre</a>
+					<a href="support.html" onClick="nav_item_selected(5)">Support Us</a>
+				</div>
+			</div>
+		</div>
+
+    <h2 style="font-size: 190%">Welcome to <strong>
+   TCMC: Artists</strong></h2>
+    
+    	<h2>Welcome to our Artist Gallery</h2>
+        <p>Here you will find the list of all the artists with their brief decription that are associated with us.</p>
+		
+    <section id="Aviva">
+    	<h2>The Aviva Quartet</h2>
+        
+        
+        <img src="images/AVIVA-TREEcrop400.jpg" alt="Aviva" align="left" >
+        
+        <p>The Aviva girls are amazing performers. he girls all have a passion for chamber music and are very excited to be able to form up a group that will be able to perform regularly both locally and in the surrounding regions. 
+Their concert will take listeners through a wonderful journey of beautiful melodies and the most romantic music that is guaranteed to leave the senses fulfilled and wanting more. 
+</p>
+    </section>
+   
+    <section id="Wassa">
+    	<h2>Wassa</h2>
+        
+        
+        <img src="images/Wassa01new1.png" alt="Wassa" align="left" >
+        
+        <p>This is a local community band who meet once a week for rehearsals, and who play gigs around town throughout the year. The band plays a range of different styles of concert band music, ranging from classical to musical theatre and modern. 
+All levels and ages are welcome.</p>
+    </section>
+    
+    <section id="Celtic">
+    	<h2>Celtic Fyre</h2>
+        
+        
+        <img src="images/CelticFyre800new2.png" alt="Celtic Fyre" align="left" >
+        
+        <p>Celtic rock is a genre of folk rock, as well as a form of Celtic fusion which incorporates Celtic music, instrumentation and themes into a rock music context.
+
+This 11 piece band blending vocals, bagpipes, violin, guitar, bass, whistle, harmonica, mandolin, bouzouki and synth to create a unique mix of contemporary and traditional songs delivered in our unique Celtic style. From beautiful, eerie ballads to foot-stompin’ Celtic folk rock, it’s all in there and is truly a fun-loving kick-em-in-the-pants band that just wants to rock - celtic style! 
+.</p>
+    </section>
+    
+    <section id="Poms">
+    	<h2>Poms From Oz</h2>
+        
+        
+        <img src="images/Poms02.png" alt="Poms From Oz" align="left" >
+        
+        <p>Poms from Oz are Judy, Kathleen and Alan Pomeroy, a family of solo vocalists from North Queensland, Australia. All are dinky di Oz with Judy and Kathy being descendents of First Fleeters. 
+Their tight harmony and vocal strength bring a fresh feel to original, contemporary and traditional works, uncovering a rich tapestry of songs gathered in their travels from around the world. Most songs are a cappella but sometimes accompanied by guitar and/or harmonica. Moods in their songs range from downright to real tear jerkers and audience participation is encouraged. Their sound is distinctive, as Judy arranges all the songs specifically for their voices. </p>
+    </section>
+    
+    
+    
+    <footer>
+        <a href="https://www.facebook.com"/>
+    <img src="images/Facebook-Footer-300x99.png" alt="Like us on Facebook" align="centre">
+         <h3 >Copyright @ TIGERS_2017</h3>
+    </footer>
+    </div>
+</body>
+</html>
