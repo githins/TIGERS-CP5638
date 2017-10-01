@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TCMC:Home</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script>
+	function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "gray";
+		}
+	}
+	
+	function nav_item_selected(li_id) {	
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "gray";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id.toString();		
+	}
+	
+</script>
+</head>
+<body onLoad="run_first()">
+	<div id="wrapper">
+	<header>
+    	<h1></h1>
+    </header>
+    
+		<div class="nav">
+			<a href="index.html" id="0" onClick="nav_item_selected(0)">Home</a>
+			<div class="dropdown">
+				<button class="dropbtn" id="1">Events</button>
+				<div class="dropdown-content">
+					
+					<a href="all_event.html" onClick="nav_item_selected(1)">Current Events</a>	
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="2">Bulletin Board</button>
+				<div class="dropdown-content">
+					<a href="new_bulletin.html" onClick="nav_item_selected(2)">Post a New one</a>
+					<a href="bulletin_board.html" onClick="nav_item_selected(2)">Bulletin Board</a>	
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="3">Musos</button>
+				<div class="dropdown-content">
+					<a href="self_musos.html" onClick="nav_item_selected(3)">Create yourself band</a>
+					<a href="artists.html" onClick="nav_item_selected(3)">Artists</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="4">Join US</button>
+					 <div class="dropdown-content">
+                     <a href="join_us.html" onClick="nav_item_selected(4)">Join Us</a>	
+					
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="5">About Us</button>
+				<div class="dropdown-content">
+					<a href="contact_us.html" onClick="nav_item_selected(5)">Contact Us</a>	
+					<a href="centre.html" onClick="nav_item_selected(5)">Our Centre</a>
+					<a href="support.html" onClick="nav_item_selected(5)">Support Us</a>
+				</div>
+			</div>
+		</div>
+
+    <h1 style="font-size: 190%">Welcome to <strong>
+    TCMC Home </strong></h1>
+    
+    
+<div class="imgslider" id="imgslider" style="max-width:500px"  >
+  <img class="mySlides" src="images/img1.jpg" style="width:100%"   alt="">
+  <img class="mySlides" src="images/img2.jpg" style="width:100%"   alt="">
+  <img class="mySlides" src="images/img3.jpg" style="width:100%"  alt="">
+  <img class="mySlides" src="images/img4.jpg" style="width:100%" alt="">
+  <img class="mySlides" src="images/img5.jpg" style="width:100%" alt="">
+  <img class="mySlides" src="images/img6.png" style="width:100%" alt="">
+  
+  
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+		
+		
+    <section id="col2">
+    	<h2>POPULAR Event</h2>
+        <img src="images/TCMCbanner.jpg" alt="Current_Event"   >
+        <p id="Current_Event">
+        <br> -SUNDAY VARIETY CONCERT 
+Presented by Friends of the Theatre 
+2pm Sunday 25 June at Pimlico Performing Arts Centre 
+Fulham Road 
+<br>Enquiries - please phone 4723 7879
+<br> <img src="images/Sunday concert.jpg" alt="sunday concert">
+<br>
+<br>
+-Townsville Guitar Orchestra 
+with special guest Paul Svoboda 
+2pm Sunday 25 July at the Carlton Theatre 
+(Carlyle Gardens) 
+Enquiries - please phone 0402 255 182
+<br><img src="images/Guitar orchestra.jpg" alt="guitar orchestra">
+<br>
+<br>
+-Arcadia Stage Band 
+2pm Sunday 6 August at the Carlton Theatre 
+(Carlyle Gardens) 
+Enquiries - please phone 0402 255 182
+<br><img src="images/Arcadia stage band.jpg" alt="arcadia stage band">
+<br>
+<br>
+-Barrier Reef Orchestra - Beethoven 
+Saturday 19th August 7.30pm
+Soloist: James Dong, Violin
+<br><img src="images/barrier reef orchestra.jpg" alt="barrier reef orchestra">
+<br>
+<br>
+-SUNDAY VARIETY CONCERT 
+Presented by Friends of the Theatre 
+2pm Sunday 27 August at Pimlico Performing Arts Centre 
+Fulham Road 
+Enquiries - please phone 4723 7879
+<br><img src="images/Sunday concert.jpg" alt="sunday concert">
+<br>
+<br>
+-Barrier Reef Orchestra
+Evening Serenade - Saturday 28th October 7 30pm
+Soloists: Sally Walker, Flute and Cassandra Wright, Soprano
+<br><img src="images/barrier reef evening.jpg" alt="barrier reef evening">
+<br>
+<br>
+-SUNDAY VARIETY CONCERT 
+Presented by Friends of the Theatre 
+2pm Sunday 29 October at Pimlico Performing Arts Centre 
+Fulham Road 
+Enquiries - please phone 4723 7879
+<br><img src="images/Sunday evening.jpg" alt="sunday evening concert">
+<br>
+<br>
+-SUNDAY VARIETY CONCERT 
+Presented by Friends of the Theatre 
+2pm Sunday 26 November at Pimlico Performing Arts Centre 
+Fulham Road 
+Enquiries - please phone 4723 7879
+<br><img src="images/sunday eveing 2.jpg" alt="sunday evening concert2">
+<br>
+<br>
+        
+        </p>
+    </section>
+   
+    <section id="col5">
+		<h4><a href="centre.html"><u>Our Centre</u></a></h4>
+        <p>
+    		<img src="images/CivicFront600.jpg" alt="support">
+    	</p>
+    	<p>Townsville Community Music Centre is a not-for-profit, incorporated organisation serving musicians and their audience in North Queensland. The Music Centre's role includes facilitation, presentation and promotion of events, functions, education, workshops, concerts, festivals in Townsville, and surrounding centres. <br>Based in Townsville, North Qeensland, thiss Music Centre presents workshops and concerts around the year, in a diverse range of genres including folk, jazz, classical, blues, world and contemporary music, featuring touring artists and locally-based professional and emerging artists. </p>
+    	<h5><a href="support.html"><u>Support</u></a></h5>
+    	<p>
+    		<img src="images/TCCgcbfQN100px.png" alt="support">
+    	</p>
+    </section>
+    <footer>
+    <a href="https://www.facebook.com"/>
+    <img src="images/Facebook-Footer-300x99.png"  alt="Like us on Facebook" align="centre">
+           <h3 >Copyright @ TIGERS_2017</h3>
+    </footer>
+
+
+    </div>
+</body>
+</html>
