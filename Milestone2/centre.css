@@ -1,0 +1,176 @@
+@charset "utf-8";
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+background-color: black;
+}
+
+#wrapper {
+		width: 95%;
+		margin: 0 auto;
+}
+header {
+	background-image: url(images/TCMCbanner01.png);
+	height: 7.1em;
+}
+header h1 {
+	color: white;
+	margin-left: 6em;
+}
+h1
+{
+	color:#AAEF9A;
+}
+
+footer h3
+{ color:#E9B6B7;
+ }
+header img {
+	float: left;
+	padding-right: 0;
+	padding-top: 20px;
+}
+
+header h2 {
+	padding-left: 0.2em;
+}
+
+.nav {
+	overflow: hidden;
+	background-color:#02071F;
+	width: 100%;
+	height: 3em;
+	float: right;
+}
+.nav a {
+	float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 40px;
+    text-decoration: none;
+}
+
+.nav a:hover, .dropdown:hover {
+	background-color: gray;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown-content {
+    display: none;
+    position:absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color:inherit;
+}
+#officehours {
+	clear: both;
+	width: 30%;
+	float: left;
+	text-align: center;
+	font-size: 105%;
+	background-color: aliceblue;
+	margin-right: 0.5em;
+}
+
+#centre {
+	width: 66%;
+	float: left;
+	text-align: center;
+	font-size: 105%;
+	background-color: aliceblue;
+	padding: 1em;
+}
+#centre img {
+	text-align: center;
+}
+#centre h1 {
+	font-size: 120%;
+}
+#first30years {
+	clear:both;
+	float: left;
+	text-align: center;
+	font-size: 110%;
+	background-color: aliceblue;
+	margin: 1em 2em;
+	padding: 3em;
+}
+#first30years h1 {
+	font-size: 120%;
+	margin-top: 1.5em;
+}
+#first30years img {
+	float:left;
+	margin: 3.5em 0;
+	padding:1em;
+}
+
+#history {
+	background-image:url(woodgrainlight.jpg);
+	clear: both;
+	width: 95%;
+	float:inherit;
+	text-align: inherit;
+	font-size: 105%;
+	background-color: aliceblue;
+	margin: 1em 2em;
+	padding: 2em;
+}
+#history h1 {
+	font-size: 120%;
+	text-align: center;
+}
+#support {
+	width: 100%;
+	clear: both;
+	float: left;
+	text-align: center;
+	font-size: 105%;
+	background-color: aliceblue;
+	margin-top: 1em;
+}
+#support img {
+	text-align: center;
+}
+#support h1 {
+	font-size: 120%;
+}
+footer {
+	clear:both;
+	font-size:105%;
+	height:13%;
+	text-align:center;
+	background-color: #02071F;
+}
+footer img {
+	float:right;
+	align-content:center;
+}
