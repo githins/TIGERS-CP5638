@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Townsville Community Music Centre</title>
+<link href="support.css" rel="stylesheet" type="text/css">
+<script>
+	function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "gray";
+		}
+	}
+	
+	function nav_item_selected(li_id) {	
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "gray";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id.toString();		
+	}
+	
+</script>
+</head>
+
+<body onLoad="run_first()">
+	<div id="wrapper">
+	<header>
+    	<h1 ></h1>
+    </header>
+    
+		<div class="nav">
+			<a href="index.html" id="0" onClick="nav_item_selected(0)">Home</a>
+			<div class="dropdown">
+				<button class="dropbtn" id="1">Events</button>
+				<div class="dropdown-content">
+					
+					<a href="all_event.html" onClick="nav_item_selected(1)">Current Events</a>	
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="2">Bulletin Board</button>
+				<div class="dropdown-content">
+					<a href="new_bulletin.html" onClick="nav_item_selected(2)">Post a New one</a>
+					<a href="bulletin_board.html" onClick="nav_item_selected(2)">Bulletin Board</a>	
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="3">Musos</button>
+				<div class="dropdown-content">
+					<a href="self_musos.html" onClick="nav_item_selected(3)">Create yourself band</a>
+					<a href="artists.html" onClick="nav_item_selected(3)">Artists</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="4">Join US</button>
+					 <div class="dropdown-content">
+                     <a href="join_us.html" onClick="nav_item_selected(4)">Join Us</a>	
+					
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="5">About Us</button>
+				<div class="dropdown-content">
+					<a href="contact_us.html" onClick="nav_item_selected(5)">Contact Us</a>	
+					<a href="centre.html" onClick="nav_item_selected(5)">Our Centre</a>
+					<a href="support.html" onClick="nav_item_selected(5)">Support Us</a>
+				</div>
+			</div>
+		</div>
+
+    <h1 style="font-size: 190%" id="welcome">Welcome to <strong>
+    TCMC : Support</strong></h1>
+		
+    <section id="support">
+    	<h1>Support</h1>
+    	<p>
+    		<img src="images/TCCgcbfQN100px.png" alt="support">
+    	</p>
+    </section>
+    <section id="sponsors">
+    	<img src="images/QN136100.gif" alt="sponsors">
+    	<h1>The <a href="centre.html"><u>Music Centre</u></a> receives vital support from the sponsors featured on this page</h1>
+    	<p>Our music concerts are well-publicised and well-attended and sponsors enjoy brand exposure throughout the Arts community. We welcome sponsorship or assistance in any form.</p>
+    </section>
+    <section id="CityCouncil">
+    	<img src="images/TCCcolour150193.gif" alt="citycouncil">
+    	<h1>Townsville City Council </h1>
+    	<p>The Council's Partnerships and Sponsorships scheme provides vital core funding which enables us to maintain the administrative base for all our other activities, and also provides the premises which house our office space. 
+    	<br>The Council also assists with the performance venues for our concerts and workshops. 
+    	</p>
+    </section>
+    <section id="Government">
+    	<img src="images/QG.gif" alt="QLDgovernment">
+    	<h1>Queensland Government</h1>
+    	<p>The Gambling Community Benefit Fund has assisted us to obtain office equipment and sound and lighting equipment for our productions 
+    	</p>
+    </section>
+    <footer>
+        <a href="https://www.facebook.com"/>
+    	<img src="images/facebook logo.png" alt="facebooklogo">
+        <h3 >Copyright @ TIGERS_2017</h3>
+    </footer>
+    </div>
+</body>
+</html>
