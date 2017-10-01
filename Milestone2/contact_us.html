@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Townsville Community Music Centre</title>
+<link href="contact_us.css" rel="stylesheet" type="text/css">
+<script>
+	function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "gray";
+		}
+	}
+	
+	function nav_item_selected(li_id) {	
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "gray";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id.toString();		
+	}
+	
+</script>
+</head>
+
+<body onLoad="run_first()">
+	<div id="wrapper">
+	<header>
+    	<h1 ></h1>
+    </header>
+    
+		<div class="nav">
+			<a href="index.html" id="0" onClick="nav_item_selected(0)">Home</a>
+			<div class="dropdown">
+				<button class="dropbtn" id="1">Events</button>
+				<div class="dropdown-content">
+					
+					<a href="all_event.html" onClick="nav_item_selected(1)">Current Events</a>	
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="2">Bulletin Board</button>
+				<div class="dropdown-content">
+					<a href="new_bulletin.html" onClick="nav_item_selected(2)">Post a New one</a>
+					<a href="bulletin_board.html" onClick="nav_item_selected(2)">Bulletin Board</a>	
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="3">Musos</button>
+				<div class="dropdown-content">
+					<a href="self_musos.html" onClick="nav_item_selected(3)">Create yourself band</a>
+					<a href="artists.html" onClick="nav_item_selected(3)">Artists</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="4">Join US</button>
+					 <div class="dropdown-content">
+                     <a href="join_us.html" onClick="nav_item_selected(4)">Join Us</a>	
+					
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="5">About Us</button>
+				<div class="dropdown-content">
+					<a href="contact_us.html" onClick="nav_item_selected(5)">Contact Us</a>	
+					<a href="centre.html" onClick="nav_item_selected(5)">Our Centre</a>
+					<a href="support.html" onClick="nav_item_selected(5)">Support Us</a>
+				</div>
+			</div>
+		</div>
+
+    <h2 style="font-size: 190%; color: white">Welcome to <strong>
+    TCMC: Contact Info</strong></h2>
+    
+    <section id="membershipform">
+		<script>		
+			function checkRePassword(document) {	
+			  var pwd = document.getElementById("password");
+			  var pwd_msg = document.getElementById('pwd_msg');
+			  var repwd = document.getElementById("rePassword");	  
+			  if (pwd.value != repwd.value) {
+				pwd_msg.innerHTML = "The two passwords are not the same.";
+				repwd.value = "";
+				pwd.focus();
+				return false;
+			  }
+			  else {
+				pwd_msg.innerHTML = "";  
+			  }  
+			  return true;
+			}	
+
+			function checkZIPCode(document) {
+			  var zip = document.getElementById("zip");
+			  var zip_msg = document.getElementById("zip_msg");
+			  var isNum = /^[0-9]{4}$/.test(zip.value); // 4 digits
+			  if(!isNum) {
+				zip_msg.innerHTML = "4 digits are required.";
+				zip.focus();
+				return false;
+			  }
+			  else {
+				zip_msg.innerHTML = "";  
+			  }  
+			  return true;		
+			}
+
+			function validateInfo(document) { 
+			  if ( checkRePassword(document) && checkZIPCode(document) )
+			  { 
+				return true;
+			  }
+			  return false;
+			}
+
+			function changeYellowColor(id) {
+				document.getElementById(id).style.backgroundColor = "yellow";
+			}
+
+			function changeWhiteColor(id) {
+				document.getElementById(id).style.backgroundColor = "white";
+			}
+		</script>
+		
+		<div class="member_frm">
+			<h1>New Membership Form</h1>
+			<h2>Please enter your profile</h2>
+			<p><i>Fields marked with an asterisk (*) must be entered.</i></p>
+			<form action="" method="post">
+				<div class="row">
+					<div class="col">
+						<label for="name">* Name:</label>
+						<input type="text" id="name" size="15" maxlength="50" onFocus="changeYellowColor(id)" onBlur="changeWhiteColor(id)" required/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<label for="email">* Email:</label>
+						<input type="email" id="email" size="15" maxlength="50" onFocus="changeYellowColor(id)" onBlur="changeWhiteColor(id)" required/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<label for="password">* Password:</label>
+						<input type="password" id="password" size="15" maxlength="20" onFocus="changeYellowColor(id)" onBlur="changeWhiteColor(id)" required/>
+					</div>
+					<div class="col pwd_msg" id="pwd_msg" style="color:red;">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<label for="repassword">* Re-try:</label>
+						<input type="password" id="rePassword" size="15" maxlength="20" 
+								onChange="checkRePassword(document)" onFocus="changeYellowColor(id)" onBlur="changeWhiteColor(id)" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<label for="zip">* Postcode:</label>
+						<input type="text" id="zip" size="10" maxlength="10" placeholder="4 digits" 
+								onChange="checkZIPCode(document)" onFocus="changeYellowColor(id)" onBlur="changeWhiteColor(id)" />
+					</div>
+					<div class="col zip_msg" id="zip_msg" style="color:red;">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<label>&nbsp;</label>
+						<input type="submit" id="submit" value="Submit" onClick="return validateInfo(document)" />
+						<input type="reset" id="reset" value="Clear Form"/>
+					</div>
+				</div>
+			</form>
+		</div>
+    </section>
+    <section id="contact">
+        <img src="images/TCMC98Neg-10.jpg" alt="Current_Event" id="logo">
+        <p>Based in Townsville, North Qld, the Music Centre presents concerts and workshops throughout the year, in a diverse range of genres including classical, jazz, folk, blues, world and contemporary music, featuring touring artists and locally-based professional and emerging artists.</p>
+    	<h1 style="font-size:180%"><strong>Our Contact Methods</strong></h1>
+        <p id="Current_Event">
+        <li>Phone: 07 4724 2086</li>
+        <li>Mobile: 0457 314 611</li>
+        <li>Postal Address: PO Box 1006, Townsville, Qld 4810</li>
+        <li>Address: Townsville Civic Theatre, 41 Boundary Street, Townsville, Qld 4810</li>
+        <br><a href="all_event.html" id="event" style="size:90%">→Welcome to Join Our Events</a>
+        <br><a href="membership_details.html" id="membership" style="size:90%">→More details about our Memberships</a>
+        </p>
+    </section>
+    <section id="centre">
+    	<h1><a href="centre.html">Our Centre</a></h1>
+        <img src="images/CivicFront600.jpg" alt="centre">
+    	<p>Townsville Community Music Centre is a not-for-profit, incorporated organisation serving musicians and their audience in North Queensland. The Music Centre's role includes facilitation, presentation and promotion of events, functions, education, workshops, concerts, festivals in Townsville, and surrounding centres.</p>
+    </section>
+    <section id="support">
+    	<h1><a href="support.html">Support</a></h1>
+    	<p>
+    		<img src="images/TCCgcbfQN100px.png" alt="support">
+    	</p>
+    </section>
+    <footer>
+        <a href="https://www.facebook.com"/>
+    	<img src="images/facebook logo.png" alt="facebooklogo">
+      <h3 >Copyright @ TIGERS_2017</h3>
+    </footer>
+    </div>
+</body>
+</html>
