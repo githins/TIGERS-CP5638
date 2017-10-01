@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TCMC: EVENTS</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script>
+	function run_first() {
+		var id_var = sessionStorage.li_id;
+		if(id_var) {
+			document.getElementById(id_var).style.backgroundColor = "gray";
+		}
+	}
+	
+	function nav_item_selected(li_id) {	
+		for(i = 0; i < 6; i++) {
+			document.getElementById(i.toString()).style.backgroundColor = "";
+		}
+		document.getElementById(li_id.toString()).style.backgroundColor = "gray";
+		
+		//store li_id in sessionStorage
+		sessionStorage.li_id = li_id.toString();		
+	}
+	
+</script>
+</head>
+
+<body onLoad="run_first()">
+	<div id="wrapper">
+	<header>
+    	<h1></h1>
+    </header>
+    
+		<div class="nav">
+			<a href="index.html" id="0" onClick="nav_item_selected(0)">Home</a>
+			<div class="dropdown">
+				<button class="dropbtn" id="1">Events</button>
+				<div class="dropdown-content">
+					
+					<a href="all_event.html" onClick="nav_item_selected(1)">Current Events</a>	
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="2">Bulletin Board</button>
+				<div class="dropdown-content">
+					<a href="new_bulletin.html" onClick="nav_item_selected(2)">Post a New one</a>
+					<a href="bulletin_board.html" onClick="nav_item_selected(2)">Bulletin Board</a>	
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="3">Musos</button>
+				<div class="dropdown-content">
+					<a href="self_musos.html" onClick="nav_item_selected(3)">Create yourself band</a>
+					<a href="artists.html" onClick="nav_item_selected(3)">Artists</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="4">Join US</button>
+                 <div class="dropdown-content">
+					<a href="join_us.html" onClick="nav_item_selected(4)">Join Us</a>	
+					
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="5">About Us</button>
+				<div class="dropdown-content">
+					<a href="contact_us.html" onClick="nav_item_selected(5)">Contact Us</a>	
+					<a href="centre.html" onClick="nav_item_selected(5)">Our Centre</a>
+					<a href="support.html" onClick="nav_item_selected(5)">Support Us</a>
+				</div>
+			</div>
+		</div>
+
+    <h1 style="font-size: 190%">Welcome to <strong>
+    <br>TCMC - Events</strong></h1>
+    
+ 
+		
+	
+   
+    <section id="col2">
+    	<h2>Events</h2>
+        <img src="images/Dirty dozen.png" alt="Current_Event">
+        <p id="Current_Event">
+        <br>Date: Evety first Saturday of every month
+        <br>Place: The town hall
+        <br>Time: 6pm - 11pm 
+        <br id="event_detail"><a href="popular_event.html">More details  </a>
+        <a href="all_event.html">More events for you</a>
+        <br><a href="join_us.html" id="join_us">Join Us  </a>
+        <a href="membership_details.html">More about memberships</a>
+        </p>
+    </section>
+    
+    <section id="col5" align="middle">
+    	<h4></h4>
+    	<p></p>
+    	<h5>Support</h5>
+    	<p>
+    		<img src="images/TCCgcbfQN100px.png" alt="support"  >
+    	</p>
+    </section>
+    <footer>
+        <a href="https://www.facebook.com"/>
+    <img src="images/Facebook-Footer-300x99.png" alt="Like us on Facebook" align="centre">
+         <h3 >Copyright @ TIGERS_2017</h3>
+    </footer>
+
+
+    </div>
+</body>
+</html>
